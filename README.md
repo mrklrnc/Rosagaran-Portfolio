@@ -1,4 +1,4 @@
-# 🌐 Mark Laurence P. Rosagaran - IT Specialist Portfolio
+# 🌐 Mark Laurence P. Rosagaran - IT Portfolio
 
 A modern, high-performance, and responsive personal portfolio website for **Mark Laurence P. Rosagaran**, Information Technology student at **National University** and aspiring IT Systems & Networking Specialist.
 
