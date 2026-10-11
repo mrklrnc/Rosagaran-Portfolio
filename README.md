@@ -61,7 +61,3 @@ Rosagaran-Portfolio/
 
 ---
 
-## 🌐 Free Deployment Options
-
-- **GitHub Pages**: Push this repository to GitHub and enable Pages in `Settings > Pages`.
-- **Netlify / Vercel**: Drag and drop the project folder directly onto [Netlify Drop](https://app.netlify.com/drop) or import to Vercel.
