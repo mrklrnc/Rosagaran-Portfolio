@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Mark Laurence P. Rosagaran - Dedicated IT Student at National University seeking internship opportunities in networking, hardware, and modern software development.">
+    <meta name="keywords" content="Mark Laurence Rosagaran, IT Student, National University, Cisco Networking, Hardware Basics, IT Portfolio, Manila">
+    <meta name="author" content="Mark Laurence P. Rosagaran">
+
+    <title>Mark Laurence P. Rosagaran | IT Student</title>
+
+    <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Core Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Top Announcement / Availability Bar -->
+    <div class="announcement-bar" id="announcementBar">
+        <div class="container announcement-content">
+            <span class="pulse-indicator"></span>
+            <p><strong>Status:</strong> Actively Seeking IT Internship &amp; Apprenticeship Opportunities | Open for Technical Roles</p>
+            <button class="announcement-close" id="closeAnnouncement" aria-label="Close banner">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <!-- Brand Logo -->
+            <a href="#hero" class="nav-brand">
+                <span class="brand-code">&lt;</span>
+                <span class="brand-name">Mark<span class="text-accent">.</span>Rosagaran</span>
+                <span class="brand-code">/&gt;</span>
+            </a>
+
+            <!-- Desktop Nav Menu -->
+            <nav class="nav-menu" id="navMenu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Tech Stack</a></li>
+                    <li class="nav-item"><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certs</a></li>
+                </ul>
+            </nav>
+
+            <!-- Nav Actions -->
+            <div class="nav-actions">
+                <!-- Theme Switcher -->
+                <div class="theme-dropdown-wrapper">
+                    <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle theme" title="Switch Theme">
+                        <i class="fa-solid fa-moon theme-icon-active" id="themeIcon"></i>
+                    </button>
+                    <div class="theme-menu" id="themeMenu">
+                        <button class="theme-option active" data-theme-val="dark"><i class="fa-solid fa-moon"></i> Dark Modern</button>
+                        <button class="theme-option" data-theme-val="cyber"><i class="fa-solid fa-bolt"></i> Cyber Neon</button>
+                        <button class="theme-option" data-theme-val="light"><i class="fa-solid fa-sun"></i> Clean Light</button>
+                    </div>
+                </div>
+
+                <!-- CV / Resume Button -->
+                <a href="Mark_Laurence_Rosagaran_CV.pdf" download="Mark_Laurence_Rosagaran_CV.pdf" class="btn btn-sm btn-outline-glow download-cv-btn" id="resumeBtn">
+                    <i class="fa-solid fa-file-arrow-down"></i> <span>Download CV</span>
+                </a>
+
+                <!-- Mobile Hamburger Toggle -->
+                <button class="hamburger-btn" id="hamburgerBtn" aria-label="Open menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Interactive Background Canvas (Matrix / Particle Network) -->
+    <canvas id="bgCanvas" class="bg-canvas"></canvas>
+
+    <main id="main-content">
+        <!-- ==================== HERO SECTION ==================== -->
+        <section class="hero-section" id="hero">
+            <div class="container hero-grid">
+                <!-- Left Hero Content -->
+                <div class="hero-content">
+                    <div class="hero-badge-wrapper">
+                        <span class="badge badge-cyber">
+                            <i class="fa-solid fa-graduation-cap"></i> IT Student &bull; National University
+                        </span>
+                        <span class="badge badge-status">
+                            <span class="status-dot"></span> Available for Internship
+                        </span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        Hello, I'm <br>
+                        <span class="text-gradient glitch-text" data-text="Mark Laurence Rosagaran">Rosagaran, Mark Laurence P.</span>
+                    </h1>
+
+                    <!-- Dynamic Typing Tagline -->
+                    <div class="hero-typing-container">
+                        <span class="typing-prefix">&gt;&nbsp;</span>
+                        <span class="typing-text" id="typingElement"></span>
+                        <span class="typing-cursor">|</span>
+                    </div>
+
+                    <!-- Short bio from CV Objective -->
+                    <p class="hero-description">
+                        Dedicated IT student seeking an internship opportunity to apply foundational technical skills while continuing to learn and grow. Possesses strong problem-solving abilities, familiarity with modern programming frameworks, and experience with version control and collaborative workflows. Eager to develop expertise and contribute meaningfully to a forward-thinking organization.
+                    </p>
+
+                    <!-- Hero Call to Action Buttons -->
+                    <div class="hero-cta-group">
+                        <a href="#education" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-graduation-cap"></i> Academic Journey
+                        </a>
+                        <a href="#certifications" class="btn btn-outline">
+                            <i class="fa-solid fa-certificate"></i> Verified Certifications
+                        </a>
+                        <a href="mailto:mlrosagaran@gmail.com" class="btn btn-ghost">
+                            <i class="fa-solid fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+
+                    <!-- Quick Social / Links -->
+                    <div class="hero-social-links">
+                        <a href="mailto:mlrosagaran@gmail.com" class="social-icon" aria-label="Email" title="Direct Email: mlrosagaran@gmail.com">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:09633781077" class="social-icon" aria-label="Phone" title="Phone: 09633781077">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                        <a href="https://github.com/mrklrnc" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub" title="GitHub: https://github.com/mrklrnc">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/mark-laurence-rosagaran-81b5a8354" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn" title="LinkedIn: Mark Laurence Rosagaran">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Hero Card / 3D Visual Box -->
+                <div class="hero-visual">
+                    <div class="tech-card-3d" id="heroCard3D">
+                        <div class="card-glow-layer"></div>
+                        <div class="card-border-gradient"></div>
+                        
+                        <div class="card-inner">
+                            <!-- Card Header with OS dots -->
+                            <div class="card-top-bar">
+                                <div class="window-dots">
+                                    <span class="dot dot-red"></span>
+                                    <span class="dot dot-yellow"></span>
+                                    <span class="dot dot-green"></span>
+                                </div>
+                                <span class="window-title">candidate_profile.json</span>
+                            </div>
+
+                            <!-- Avatar & Core Profile Area -->
+                            <div class="profile-avatar-container">
+                                <div class="avatar-ring">
+                                    <div class="avatar-img-placeholder" id="avatarPreview">
+                                        <img src="assets/images/profile.jpg" alt="Mark Laurence P. Rosagaran">
+                                    </div>
+                                </div>
+                                <div class="profile-info-badge">
+                                    <h4 class="profile-badge-name">Mark Laurence P. Rosagaran</h4>
+                                    <p class="profile-badge-sub">BSIT Student @ National University</p>
+                                </div>
+                            </div>
+
+                            <!-- Live Code Snippet Display -->
+                            <div class="code-snippet-box">
+                                <pre><code class="language-javascript"><span class="c-keyword">const</span> <span class="c-variable">candidate</span> = {
+  <span class="c-prop">name</span>: <span class="c-string">"Mark Laurence P. Rosagaran"</span>,
+  <span class="c-prop">role</span>: <span class="c-string">"IT Student &amp; Intern Candidate"</span>,
+  <span class="c-prop">college</span>: <span class="c-string">"National University"</span>,
+  <span class="c-prop">distinction</span>: <span class="c-string">"First Honor Dean's Lister"</span>,
+  <span class="c-prop">location</span>: <span class="c-string">"Sampaloc, Manila"</span>
+};</code></pre>
+                            </div>
+
+                            <!-- Mini Metrics Row -->
+                            <div class="profile-metrics-row">
+                                <div class="metric-item">
+                                    <span class="metric-num count-up" data-target="4">4x</span>
+                                    <span class="metric-label">Dean's Lister</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-num count-up" data-target="3">3</span>
+                                    <span class="metric-label">Certifications</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-num">100%</span>
+                                    <span class="metric-label">Discipline</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-num">STEM</span>
+                                    <span class="metric-label">With Honors</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Down Indicator -->
+            <a href="#about" class="scroll-down-indicator" aria-label="Scroll to About section">
+                <span class="mouse-icon">
+                    <span class="wheel"></span>
+                </span>
+                <span class="scroll-text">Scroll Down</span>
+            </a>
+        </section>
+
+        <!-- ==================== ABOUT SECTION ==================== -->
+        <section class="section about-section" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-user-check"></i> Candidate Profile</span>
+                    <h2 class="section-title">About <span class="text-gradient">Mark Laurence</span></h2>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="about-grid">
+                    <!-- Left: Bio & Philosophy -->
+                    <div class="about-bio-card glass-card">
+                        <div class="card-header-icon">
+                            <i class="fa-solid fa-id-card-clip"></i>
+                            <h3>Academic &amp; Professional Overview</h3>
+                        </div>
+
+                        <p class="about-text">
+                            I am a dedicated <strong>Information Technology student at National University</strong> seeking an internship opportunity to apply foundational technical skills while continuing to learn and grow. Possessing strong problem-solving abilities, familiarity with modern programming frameworks, and experience with version control and collaborative workflows, I am eager to develop expertise and contribute meaningfully to a forward-thinking organization.
+                        </p>
+                        
+                        <p class="about-text">
+                            Throughout my collegiate journey, I have maintained consistent scholastic excellence as a <strong>First Honor Dean's Lister</strong> across my 1st, 2nd, and 3rd academic years. I hold certified competencies in <strong>Computer Hardware Basics, Networking Basics, and Networking Devices &amp; Initial Configuration</strong>, complemented by hands-on industry work immersion at the <strong>Philippine National Police (PNP) in Infanta, Quezon</strong>.
+                        </p>
+
+                        <!-- Key Pillars Grid -->
+                        <div class="pillars-grid">
+                            <div class="pillar-box">
+                                <div class="pillar-icon"><i class="fa-solid fa-brain"></i></div>
+                                <h4>Problem Solving</h4>
+                                <p>Strong analytical abilities, methodical troubleshooting, and eagerness to tackle complex technical problems.</p>
+                            </div>
+                            <div class="pillar-box">
+                                <div class="pillar-icon"><i class="fa-solid fa-network-wired"></i></div>
+                                <h4>Hardware &amp; Networking</h4>
+                                <p>Certified foundation in PC hardware assembly, router/switch setup, and IP configuration.</p>
+                            </div>
+                            <div class="pillar-box">
+                                <div class="pillar-icon"><i class="fa-solid fa-code-branch"></i></div>
+                                <h4>Modern Frameworks &amp; Git</h4>
+                                <p>Familiarity with modern programming frameworks, clean development practices, and Git workflows.</p>
+                            </div>
+                            <div class="pillar-box">
+                                <div class="pillar-icon"><i class="fa-solid fa-award"></i></div>
+                                <h4>Discipline &amp; Leadership</h4>
+                                <p>Marian Awardee (zero lates &amp; absences), Boy Scouts Platoon Leader, and DPO School Officer.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Quick Specs & System Info -->
+                    <div class="about-specs-card">
+                        <div class="glass-card specs-box">
+                            <div class="card-header-icon">
+                                <i class="fa-solid fa-sliders"></i>
+                                <h3>Quick Specs</h3>
+                            </div>
+
+                            <ul class="specs-list">
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-location-dot"></i> Location:</span>
+                                    <span class="spec-value">Sampaloc, Manila (Origin: Infanta, Quezon)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-graduation-cap"></i> College:</span>
+                                    <span class="spec-value">National University (BS in Information Technology)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-medal"></i> Standing:</span>
+                                    <span class="spec-value">First Honor Dean's Lister (1st, 2nd, 3rd Yr)</span>
+                                </li>
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-envelope"></i> Email:</span>
+                                    <span class="spec-value"><a href="mailto:mlrosagaran@gmail.com" class="text-link">mlrosagaran@gmail.com</a></span>
+                                </li>
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-phone"></i> Phone:</span>
+                                    <span class="spec-value"><a href="tel:09633781077" class="text-link">09633781077</a></span>
+                                </li>
+                                <li>
+                                    <span class="spec-label"><i class="fa-solid fa-language"></i> Languages:</span>
+                                    <span class="spec-value">English, Filipino</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- System Environment Box -->
+                        <div class="glass-card sys-info-box">
+                            <div class="sys-header">
+                                <span class="sys-title"><i class="fa-solid fa-microchip"></i> Academic Environment</span>
+                                <span class="badge badge-sm badge-success">Enrolled</span>
+                            </div>
+                            <div class="sys-body">
+                                <div class="sys-row">
+                                    <span>Institution:</span>
+                                    <span class="sys-val">National University (College)</span>
+                                </div>
+                                <div class="sys-row">
+                                    <span>High School:</span>
+                                    <span class="sys-val">Mount Carmel School of Infanta (STEM - With Honors)</span>
+                                </div>
+                                <div class="sys-row">
+                                    <span>Immersion:</span>
+                                    <span class="sys-val">Philippine National Police (PNP Infanta)</span>
+                                </div>
+                                <div class="sys-row">
+                                    <span>Certifications:</span>
+                                    <span class="sys-val">Cisco Networking Academy Certified</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== TECH STACK & SKILLS SECTION ==================== -->
+        <section class="section skills-section" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-layer-group"></i> Technical Proficiency</span>
+                    <h2 class="section-title">Tech Stack &amp; <span class="text-gradient">Core Skills</span></h2>
+                    <p class="section-desc">Practical competencies across computer networking, hardware architecture, software development, and technical collaboration workflows.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Skill Filter & Search Controls -->
+                <div class="skill-controls">
+                    <!-- Search Input -->
+                    <div class="skill-search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="skillSearchInput" placeholder="Search technologies, tools, or keywords..." aria-label="Search skills">
+                        <button type="button" class="clear-search-btn" id="clearSkillSearch" aria-label="Clear search">
+                            <i class="fa-solid fa-xmark"></i>
+                        </button>
+                    </div>
+
+                    <!-- Category Tabs -->
+                    <div class="skill-tabs" role="tablist">
+                        <button type="button" class="skill-tab-btn active" data-category="all">
+                            <i class="fa-solid fa-cubes"></i> All Skills
+                        </button>
+                        <button type="button" class="skill-tab-btn" data-category="networking">
+                            <i class="fa-solid fa-network-wired"></i> Networking
+                        </button>
+                        <button type="button" class="skill-tab-btn" data-category="hardware">
+                            <i class="fa-solid fa-microchip"></i> Hardware &amp; Systems
+                        </button>
+                        <button type="button" class="skill-tab-btn" data-category="software">
+                            <i class="fa-solid fa-code"></i> Software &amp; Web
+                        </button>
+                        <button type="button" class="skill-tab-btn" data-category="tools">
+                            <i class="fa-solid fa-toolbox"></i> Tools &amp; Workflows
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="skills-grid" id="skillsGrid">
+
+                    <!-- 1. MERN Stack -->
+                    <div class="skill-card glass-card" data-category="software" data-name="MERN Stack" data-tags="mern react node express mongodb web fullstack">
+                        <div class="skill-icon-wrap mern-color">
+                            <i class="fa-brands fa-react"></i>
+                        </div>
+                        <h4 class="skill-name">MERN Stack</h4>
+                    </div>
+
+                    <!-- 2. Flutter -->
+                    <div class="skill-card glass-card" data-category="software" data-name="Flutter" data-tags="flutter mobile dart cross-platform app">
+                        <div class="skill-icon-wrap flutter-color">
+                            <img src="assets/images/icons/flutter.svg" alt="Flutter" class="skill-svg-icon">
+                        </div>
+                        <h4 class="skill-name">Flutter</h4>
+                    </div>
+
+                    <!-- 3. Java -->
+                    <div class="skill-card glass-card" data-category="software" data-name="Java" data-tags="java oop backend android programming">
+                        <div class="skill-icon-wrap java-color">
+                            <i class="fa-brands fa-java"></i>
+                        </div>
+                        <h4 class="skill-name">Java</h4>
+                    </div>
+
+                    <!-- 4. Bootstrap -->
+                    <div class="skill-card glass-card" data-category="software" data-name="Bootstrap" data-tags="bootstrap css framework responsive ui components">
+                        <div class="skill-icon-wrap bootstrap-color">
+                            <i class="fa-brands fa-bootstrap"></i>
+                        </div>
+                        <h4 class="skill-name">Bootstrap</h4>
+                    </div>
+
+                    <!-- 5. JavaScript (ES6+) -->
+                    <div class="skill-card glass-card" data-category="software" data-name="JavaScript" data-tags="javascript js dom web">
+                        <div class="skill-icon-wrap js-color">
+                            <i class="fa-brands fa-js"></i>
+                        </div>
+                        <h4 class="skill-name">JavaScript</h4>
+                    </div>
+
+                    <!-- 6. HTML5 & CSS3 -->
+                    <div class="skill-card glass-card" data-category="software" data-name="HTML &amp; CSS" data-tags="html html css css responsive web">
+                        <div class="skill-icon-wrap html-color">
+                            <i class="fa-brands fa-html5"></i>
+                        </div>
+                        <h4 class="skill-name">HTML &amp; CSS</h4>
+                    </div>
+
+                    <!-- 7. Databases & SQL -->
+                    <div class="skill-card glass-card" data-category="software" data-name="Databases &amp; SQL" data-tags="sql mysql relational database queries schemas">
+                        <div class="skill-icon-wrap db-color">
+                            <i class="fa-solid fa-database"></i>
+                        </div>
+                        <h4 class="skill-name">Databases &amp; SQL</h4>
+                    </div>
+
+                    <!-- 8. Cisco Networking & IOS -->
+                    <div class="skill-card glass-card" data-category="networking" data-name="Cisco Networking &amp; IOS" data-tags="cisco ios routers switches cli packet tracer">
+                        <div class="skill-icon-wrap cisco-color">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h4 class="skill-name">Cisco Networking &amp; IOS</h4>
+                    </div>
+
+                    <!-- 9. TCP/IP & Network Protocols -->
+                    <div class="skill-card glass-card" data-category="networking" data-name="TCP/IP &amp; Protocols" data-tags="tcp ip osi subnetting ipv4 ipv6 dhcp dns nat">
+                        <div class="skill-icon-wrap net-color">
+                            <i class="fa-solid fa-diagram-project"></i>
+                        </div>
+                        <h4 class="skill-name">TCP/IP &amp; Protocols</h4>
+                    </div>
+
+                    <!-- 10. Network Infrastructure & Security -->
+                    <div class="skill-card glass-card" data-category="networking" data-name="Infrastructure &amp; Security" data-tags="security firewalls acls ssh wireless cabling">
+                        <div class="skill-icon-wrap sec-color">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4 class="skill-name">Infrastructure &amp; Security</h4>
+                    </div>
+
+                    <!-- 11. Computer Hardware & PC Assembly -->
+                    <div class="skill-card glass-card" data-category="hardware" data-name="Hardware &amp; PC Assembly" data-tags="hardware pc assembly motherboards cpu ram bios">
+                        <div class="skill-icon-wrap hardware-color">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h4 class="skill-name">Hardware &amp; PC Assembly</h4>
+                    </div>
+
+                    <!-- 12. Diagnostics & Maintenance -->
+                    <div class="skill-card glass-card" data-category="hardware" data-name="Diagnostics &amp; Maintenance" data-tags="diagnostics troubleshooting repair maintenance thermal">
+                        <div class="skill-icon-wrap hardware-color">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                        </div>
+                        <h4 class="skill-name">Diagnostics &amp; Maintenance</h4>
+                    </div>
+
+                    <!-- 13. Operating Systems & Admin -->
+                    <div class="skill-card glass-card" data-category="hardware" data-name="Operating Systems &amp; Admin" data-tags="windows linux sysadmin powershell terminal os">
+                        <div class="skill-icon-wrap cicd-color">
+                            <i class="fa-brands fa-windows"></i>
+                        </div>
+                        <h4 class="skill-name">Operating Systems &amp; Admin</h4>
+                    </div>
+
+                    <!-- 14. Git & GitHub -->
+                    <div class="skill-card glass-card" data-category="tools" data-name="Git &amp; GitHub" data-tags="git github version control repositories branching">
+                        <div class="skill-icon-wrap git-color">
+                            <i class="fa-brands fa-github"></i>
+                        </div>
+                        <h4 class="skill-name">Git &amp; GitHub</h4>
+                    </div>
+
+                    <!-- 15. Developer Tools & VS Code -->
+                    <div class="skill-card glass-card" data-category="tools" data-name="Developer Tools &amp; VS Code" data-tags="vs code devtools terminal debugging productivity">
+                        <div class="skill-icon-wrap net-color">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h4 class="skill-name">Developer Tools &amp; VS Code</h4>
+                    </div>
+
+                </div>
+
+                <!-- Empty State for Search -->
+                <div class="no-skills-found" id="noSkillsFound" style="display: none;">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <h4>No matching skills found</h4>
+                    <p>Try searching for another keyword or switch category tabs above.</p>
+                    <button type="button" class="btn btn-sm btn-outline" id="resetSkillFilterBtn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== EDUCATION, ACHIEVEMENTS & TRAININGS TIMELINE ==================== -->
+        <section class="section experience-section" id="education">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-graduation-cap"></i> Academic &amp; Personal Journey</span>
+                    <h2 class="section-title">Education, <span class="text-gradient">Achievements &amp; Trainings</span></h2>
+                    <p class="section-desc">My academic foundation at National University, scholastic honors, leadership roles, and hands-on immersion training.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Timeline Toggle Tabs (Work experience removed per user request) -->
+                <div class="timeline-tab-controls">
+                    <button class="timeline-toggle-btn active" id="eduTabBtn" data-target="eduTimeline">
+                        <i class="fa-solid fa-graduation-cap"></i> Education
+                    </button>
+                    <button class="timeline-toggle-btn" id="achievementsTabBtn" data-target="achievementsTimeline">
+                        <i class="fa-solid fa-trophy"></i> Achievements &amp; Honors
+                    </button>
+                    <button class="timeline-toggle-btn" id="trainingTabBtn" data-target="trainingTimeline">
+                        <i class="fa-solid fa-user-shield"></i> Trainings &amp; Immersion
+                    </button>
+                </div>
+
+                <!-- 1. Education Timeline -->
+                <div class="timeline-container active" id="eduTimeline">
+                    
+                    <!-- College: National University -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-blue"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">College &bull; Bachelor of Science in Information Technology</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-university"></i> National University</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-regular fa-calendar"></i> College</span>
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-location-dot"></i> Sampaloc, Manila</span>
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-medal"></i> Consecutive Dean's Lister</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Pursuing a Bachelor of Science in Information Technology at National University. Recognized as a consistent <strong>First Honor Dean's Lister</strong> across the 1st, 2nd, and 3rd academic years. Developing strong foundations in computer systems, network device configuration, software engineering, and collaborative version control workflows.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>National University</span><span>College</span><span>BSIT</span><span>First Honor Dean's Lister</span><span>Manila</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Senior High School: Mount Carmel School of Infanta (STEM) -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Senior High School &bull; Grade 11 - 12 (STEM Strand)</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-school"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-regular fa-calendar"></i> Grade 11 - 12</span>
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-location-dot"></i> Infanta, Quezon</span>
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-award"></i> With Honors</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Graduated <strong>With Honors</strong> in the Science, Technology, Engineering, and Mathematics (STEM) academic strand. Built advanced analytical reasoning, mathematical proficiency, and structured problem-solving discipline that serves as the bedrock of IT studies.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>STEM Strand</span><span>Senior High</span><span>With Honors</span><span>Infanta, Quezon</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Junior High School: Mount Carmel School of Infanta -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Junior High School &bull; Grade 7 - 10</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-school"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-regular fa-calendar"></i> Grade 7 - 10</span>
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-location-dot"></i> Infanta, Quezon</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Completed junior high school education with consistent academic commitment, developing teamwork and leadership through student government, boy scouts, and co-curricular programs.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Junior High</span><span>Grade 7-10</span><span>MCS Infanta</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Elementary: Mount Carmel School of Infanta -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Elementary Education &bull; Grade 1 - 6</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-school"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-regular fa-calendar"></i> Grade 1 - 6</span>
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-location-dot"></i> Infanta, Quezon</span>
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-award"></i> With Honors</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Completed primary schooling graduating <strong>With Honors</strong>, alongside receiving distinction as Marian Awardee for exemplary discipline and punctuality.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Elementary</span><span>Grade 1-6</span><span>With Honors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 2. Achievements & Honors Timeline -->
+                <div class="timeline-container" id="achievementsTimeline">
+                    
+                    <!-- 3rd Year Dean's Lister -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">3rd Year College &bull; First Honor Dean's Lister (1st Sem &amp; 2nd Sem)</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-building-columns"></i> National University</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-medal"></i> Highest Honor Roll</span>
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-location-dot"></i> Sampaloc, Manila</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Maintained top-tier academic standing, earning the First Honor Dean's List distinction for both first and second semesters of the third year in Information Technology.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>3rd Year</span><span>1st Sem &amp; 2nd Sem</span><span>First Honor Dean's Lister</span><span>National University</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2nd Year Dean's Lister -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">2nd Year College &bull; First Honor Dean's Lister</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-building-columns"></i> National University</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-medal"></i> Dean's Honor Roll</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Conferred First Honor Dean's List status for sustained scholastic excellence and GPA ranking in second-year collegiate IT studies.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>2nd Year</span><span>First Honor Dean's Lister</span><span>National University</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 1st Year Dean's Lister -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">1st Year College &bull; First Honor Dean's Lister</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-building-columns"></i> National University</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-medal"></i> Freshman Academic Distinction</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Achieved First Honor Dean's List ranking in freshman year, demonstrating prompt dedication and academic aptitude from the start of university studies.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>1st Year</span><span>First Honor Dean's Lister</span><span>National University</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 11-12 With Honors -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Grade 11 - 12 (STEM Strand) &bull; With Honors</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-school"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-award"></i> Academic Distinction</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Graduated Senior High School STEM strand with academic honors, excelling in technological, computational, and natural science coursework.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Grade 11-12</span><span>STEM Strand</span><span>With Honors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Grade 1-6 With Honors -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Grade 1 - 6 Elementary &bull; With Honors</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-school"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-award"></i> Scholastic Honor</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Consistently achieved academic honors throughout elementary education, establishing early habits of disciplined study and excellence.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Grade 1-6</span><span>Elementary</span><span>With Honors</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Marian Awardee -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Marian Awardee &bull; Exemplary Discipline &amp; Attendance</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-star text-amber"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-clock"></i> No Late &bull; No Absences</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Prestigious institutional honor awarded for perfect attendance, supreme punctuality, and exemplary personal discipline throughout the school year: <strong>Zero Late and Zero Absences</strong>.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Marian Awardee</span><span>Zero Tardiness</span><span>100% Attendance</span><span>Exemplary Conduct</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sabayang Pagbigkas Champion -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-gold"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Sabayang Pagbigkas Champion</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-trophy text-amber"></i> Cultural &amp; Speech Competition</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge gold-badge"><i class="fa-solid fa-crown"></i> 1st Place Champion</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Champion in competitive theatrical choral speech recitation (Sabayang Pagbigkas), demonstrating synchronized performance, oratorical skill, leadership, and teamwork.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Champion</span><span>Speech &amp; Oratory</span><span>Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lyre Band Awardee & Altar Server -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-blue"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Lyre Band Awardee &amp; Church Altar Server</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-music"></i> Co-Curricular &amp; Community Ministry</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-solid fa-hands-praying"></i> Youth Service</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Honored for musical achievement and participation as a Lyre Band performer, alongside dedicated voluntary community and spiritual service as an Altar Server.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Lyre Band</span><span>Altar Server</span><span>Community Service</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- 3. Trainings & Practical Immersion Timeline -->
+                <div class="timeline-container" id="trainingTimeline">
+                    
+                    <!-- Work Immersion PNP Infanta -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-blue"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Work Immersion at PNP (Philippine National Police)</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-shield-halved"></i> PNP Infanta Municipal Police Station, Quezon</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge loc-badge"><i class="fa-solid fa-briefcase"></i> Work Immersion</span>
+                                <span class="timeline-badge date-badge"><i class="fa-solid fa-building-shield"></i> Institutional Training</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Completed formal practical work immersion at the Philippine National Police station in Infanta, Quezon. Gained firsthand experience in public administration workflows, record management, departmental coordination, confidentiality, and professional workplace protocol.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Work Immersion</span><span>PNP Infanta</span><span>Quezon</span><span>Office Protocol</span><span>Administrative Systems</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- DPO School Training -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-green"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">DPO (Department of Peace and Order Officer) School Training</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-user-shield"></i> Mount Carmel School of Infanta</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-solid fa-shield"></i> Peace &amp; Order Officer</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Completed specialized campus peace and order officer training. Entrusted with student safety oversight, conflict mediation, orderly campus movement, and emergency preparedness.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>DPO Officer</span><span>Campus Security</span><span>Leadership Training</span><span>Conflict Resolution</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Platoon Leader Boy Scout -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-green"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Platoon Leader &bull; Boy Scouts of the Philippines (BSP)</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-compass"></i> Boy Scouts of the Philippines</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-solid fa-flag"></i> Scout Leadership</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Trained and served as Platoon Leader in the Boy Scouts. Directed squad field drills, led outdoor teamwork exercises, fostered survival skills, and coordinated civic community assistance activities.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Boy Scouts</span><span>Platoon Leader</span><span>Team Coordination</span><span>Youth Leadership</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sakristan Training -->
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-marker marker-blue"></div>
+                        <div class="timeline-header">
+                            <div class="timeline-role-info">
+                                <h3 class="role-title">Sakristan Training &amp; Youth Ministry Formation</h3>
+                                <h4 class="company-name"><i class="fa-solid fa-church"></i> Parish Liturgical Ministry</h4>
+                            </div>
+                            <div class="timeline-meta">
+                                <span class="timeline-badge date-badge"><i class="fa-solid fa-hands-praying"></i> Formation Training</span>
+                            </div>
+                        </div>
+                        <div class="timeline-body">
+                            <p class="edu-desc">
+                                Completed comprehensive liturgical formation training focusing on punctuality, personal responsibility, reverence, ceremonial coordination, and collaborative service.
+                            </p>
+                            <div class="timeline-stack">
+                                <span>Sakristan Training</span><span>Formation</span><span>Punctuality</span><span>Teamwork</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== CERTIFICATIONS ==================== -->
+        <section class="section certs-section" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-award"></i> Verified Credentials</span>
+                    <h2 class="section-title">Verified <span class="text-gradient">Certifications</span></h2>
+                    <p class="section-desc">Formal technical certifications from Cisco Networking Academy and practical work immersion credentials.</p>
+                    <div class="certs-credly-profile-wrap">
+                        <a href="https://www.credly.com/users/mark-laurence-rosagaran" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-glow credly-profile-btn">
+                            <i class="fa-solid fa-award"></i> View Official Credly Profile <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                    <div class="section-line"></div>
+                </div>
+
+                <!-- Certifications Grid -->
+                <div class="certs-grid">
+                    
+                    <!-- Cert 1: Computer Hardware Basics -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrap hardware-bg cert-badge-container">
+                            <img src="assets/images/certs/badge-hardware-basics.png" alt="Cisco Computer Hardware Basics Badge" class="cert-badge-img">
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-issuer">Cisco Networking Academy</span>
+                            <h4 class="cert-name">Computer Hardware Basics</h4>
+                            <p class="cert-code">Competency: <span class="text-mono">Hardware Architecture &amp; PC Assembly</span></p>
+                            <div class="cert-meta">
+                                <span><i class="fa-regular fa-calendar-check"></i> Issued: May 16, 2025</span>
+                                <span class="badge badge-sm badge-success"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button type="button" class="btn btn-xs btn-primary open-cert-btn" 
+                                    data-title="Computer Hardware Basics" 
+                                    data-issuer="Cisco Networking Academy" 
+                                    data-date="May 16, 2025" 
+                                    data-pdf="assets/certificates/Certificate_Computer_Hardware_Basics.pdf" 
+                                    data-credly="https://www.credly.com/badges/a458d061-7b25-43a1-8401-ba94e6b0251e/public_url">
+                                    <i class="fa-solid fa-file-pdf"></i> View Certificate
+                                </button>
+                                <a href="https://www.credly.com/badges/a458d061-7b25-43a1-8401-ba94e6b0251e/public_url" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-outline cert-verify-btn">
+                                    <i class="fa-solid fa-award"></i> Verify Badge
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2: Networking Basics -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrap net-bg cert-badge-container">
+                            <img src="assets/images/certs/badge-networking-basics.png" alt="Cisco Networking Basics Badge" class="cert-badge-img">
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-issuer">Cisco Networking Academy</span>
+                            <h4 class="cert-name">Networking Basics</h4>
+                            <p class="cert-code">Competency: <span class="text-mono">TCP/IP, OSI, Subnetting &amp; Topologies</span></p>
+                            <div class="cert-meta">
+                                <span><i class="fa-regular fa-calendar-check"></i> Issued: May 20, 2025</span>
+                                <span class="badge badge-sm badge-success"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button type="button" class="btn btn-xs btn-primary open-cert-btn" 
+                                    data-title="Networking Basics" 
+                                    data-issuer="Cisco Networking Academy" 
+                                    data-date="May 20, 2025" 
+                                    data-pdf="assets/certificates/certificate_rosagaran_networking_basics.pdf" 
+                                    data-credly="https://www.credly.com/badges/5b6231f1-b9bc-4288-a1de-3263d82773fc/public_url">
+                                    <i class="fa-solid fa-file-pdf"></i> View Certificate
+                                </button>
+                                <a href="https://www.credly.com/badges/5b6231f1-b9bc-4288-a1de-3263d82773fc/public_url" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-outline cert-verify-btn">
+                                    <i class="fa-solid fa-award"></i> Verify Badge
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cert 3: Networking Devices and Initial Configuration -->
+                    <div class="cert-card glass-card">
+                        <div class="cert-icon-wrap cisco-bg cert-badge-container">
+                            <img src="assets/images/certs/badge-networking-devices.png" alt="Cisco Networking Devices Badge" class="cert-badge-img">
+                        </div>
+                        <div class="cert-details">
+                            <span class="cert-issuer">Cisco Networking Academy</span>
+                            <h4 class="cert-name">Networking Devices &amp; Initial Configuration</h4>
+                            <p class="cert-code">Competency: <span class="text-mono">Cisco Routers, Switches &amp; IOS CLI</span></p>
+                            <div class="cert-meta">
+                                <span><i class="fa-regular fa-calendar-check"></i> Issued: May 21, 2025</span>
+                                <span class="badge badge-sm badge-success"><i class="fa-solid fa-circle-check"></i> Verified</span>
+                            </div>
+                            <div class="cert-actions">
+                                <button type="button" class="btn btn-xs btn-primary open-cert-btn" 
+                                    data-title="Networking Devices &amp; Initial Configuration" 
+                                    data-issuer="Cisco Networking Academy" 
+                                    data-date="May 21, 2025" 
+                                    data-pdf="assets/certificates/certificate_rosagaran_networking_devices_and_initial_configuration.pdf" 
+                                    data-credly="https://www.credly.com/badges/b19829fd-9780-43f0-a0a4-4371970b76c5/public_url">
+                                    <i class="fa-solid fa-file-pdf"></i> View Certificate
+                                </button>
+                                <a href="https://www.credly.com/badges/b19829fd-9780-43f0-a0a4-4371970b76c5/public_url" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-outline cert-verify-btn">
+                                    <i class="fa-solid fa-award"></i> Verify Badge
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#hero" class="nav-brand">
+                        <span class="brand-code">&lt;</span>
+                        <span class="brand-name">Mark<span class="text-accent">.</span>Rosagaran</span>
+                        <span class="brand-code">/&gt;</span>
+                    </a>
+                    <p class="footer-tagline">Dedicated Information Technology Student @ National University &bull; Seeking Internship Opportunities in Systems, Networking &amp; Software.</p>
+                </div>
+
+                <div class="footer-nav-links">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Tech Stack &amp; Skills</a></li>
+                        <li><a href="#education">Education &amp; Journey</a></li>
+                        <li><a href="#certifications">Certifications</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-social-column">
+                    <h4>Connect</h4>
+                    <div class="footer-socials">
+                        <a href="mailto:mlrosagaran@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="tel:09633781077" aria-label="Phone"><i class="fa-solid fa-phone"></i></a>
+                        <a href="https://github.com/mrklrnc" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/mark-laurence-rosagaran-81b5a8354" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== CERTIFICATE VIEWER MODAL ==================== -->
+    <div class="cert-modal-backdrop" id="certViewerModal" aria-hidden="true" role="dialog" aria-labelledby="certModalTitle">
+        <div class="cert-modal-dialog">
+            <div class="cert-modal-content glass-card">
+                <!-- Modal Header -->
+                <div class="cert-modal-header">
+                    <div class="cert-modal-title-wrap">
+                        <span class="cert-modal-tag" id="certModalIssuer">Cisco Networking Academy</span>
+                        <h3 class="cert-modal-title" id="certModalTitle">Certificate Preview</h3>
+                    </div>
+                    <button class="cert-modal-close" id="closeCertModalBtn" aria-label="Close certificate viewer">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+
+                <!-- Modal Subbar / Tools -->
+                <div class="cert-modal-subbar">
+                    <div class="cert-modal-info">
+                        <span id="certModalDate"><i class="fa-regular fa-calendar-check"></i> Issued Date</span>
+                    </div>
+                    <div class="cert-modal-tools">
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-outline-glow" id="certModalCredlyLink">
+                            <i class="fa-solid fa-award"></i> Verify on Credly <i class="fa-solid fa-arrow-up-right-from-square" style="font-size: 0.7rem;"></i>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-xs btn-outline" id="certModalNewTabLink">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> Open Full PDF
+                        </a>
+                        <a href="#" download class="btn btn-xs btn-primary" id="certModalDownloadLink">
+                            <i class="fa-solid fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Modal Body (Embedded PDF Viewer) -->
+                <div class="cert-modal-body">
+                    <iframe id="certModalIframe" class="cert-modal-iframe" src="" title="Certificate Preview"></iframe>
+                    <div class="cert-modal-fallback" id="certModalFallback">
+                        <i class="fa-solid fa-file-pdf cert-fallback-icon"></i>
+                        <h4 style="margin: 0.5rem 0; color: #fff;">Certificate Document</h4>
+                        <p style="color: var(--text-muted); font-size: 0.85rem; max-width: 400px; margin-bottom: 1rem;">Click below to view or download the high-resolution certificate PDF.</p>
+                        <a href="#" target="_blank" class="btn btn-primary btn-sm" id="certModalFallbackBtn">
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i> View PDF in New Tab
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== TOAST NOTIFICATION CONTAINER ==================== -->
+    <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+    <!-- ==================== BACK TO TOP BUTTON ==================== -->
+    <button class="back-to-top-btn" id="backToTopBtn" aria-label="Back to top" title="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
