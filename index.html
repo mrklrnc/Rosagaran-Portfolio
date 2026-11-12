@@ -48,6 +48,7 @@
                     <li class="nav-item"><a href="#hero" class="nav-link active"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li class="nav-item"><a href="#about" class="nav-link"><i class="fa-solid fa-user"></i> About</a></li>
                     <li class="nav-item"><a href="#skills" class="nav-link"><i class="fa-solid fa-layer-group"></i> Tech Stack</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link"><i class="fa-solid fa-laptop-code"></i> Projects</a></li>
                     <li class="nav-item"><a href="#education" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> Education</a></li>
                     <li class="nav-item"><a href="#certifications" class="nav-link"><i class="fa-solid fa-certificate"></i> Certs</a></li>
                 </ul>
@@ -119,14 +120,14 @@
 
                     <!-- Hero Call to Action Buttons -->
                     <div class="hero-cta-group">
-                        <a href="#education" class="btn btn-primary btn-glow">
+                        <a href="#projects" class="btn btn-primary btn-glow">
+                            <i class="fa-solid fa-laptop-code"></i> Featured Projects
+                        </a>
+                        <a href="#education" class="btn btn-outline">
                             <i class="fa-solid fa-graduation-cap"></i> Academic Journey
                         </a>
-                        <a href="#certifications" class="btn btn-outline">
+                        <a href="#certifications" class="btn btn-ghost">
                             <i class="fa-solid fa-certificate"></i> Verified Certifications
-                        </a>
-                        <a href="mailto:mlrosagaran@gmail.com" class="btn btn-ghost">
-                            <i class="fa-solid fa-envelope"></i> Contact Me
                         </a>
                     </div>
 
@@ -509,6 +510,68 @@
                     <h4>No matching skills found</h4>
                     <p>Try searching for another keyword or switch category tabs above.</p>
                     <button type="button" class="btn btn-sm btn-outline" id="resetSkillFilterBtn">Reset Filters</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ==================== FEATURED PROJECTS SECTION ==================== -->
+        <section class="section projects-section" id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-solid fa-code"></i> Practical Works &amp; Applications</span>
+                    <h2 class="section-title">Featured <span class="text-gradient">Projects</span></h2>
+                    <p class="section-desc">Practical systems and web applications built to streamline workflows, monitor metrics, and solve real-world student and workplace challenges.</p>
+                    <div class="section-line"></div>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project Card: Internship Hour Tracker -->
+                    <article class="project-card glass-card" data-href="https://internship-hour-tracker.vercel.app/" role="link" tabindex="0" title="Click to launch Internship Hour Tracker">
+                        <div class="project-card-header">
+                            <div class="project-badges">
+                                <span class="badge badge-cyber"><i class="fa-solid fa-layer-group"></i> Full-Stack App</span>
+                                <span class="badge badge-status"><span class="status-dot"></span> Active</span>
+                            </div>
+                            <a href="https://internship-hour-tracker.vercel.app/" target="_blank" rel="noopener noreferrer" class="project-external-icon-btn" title="Open Internship Hour Tracker in a new tab" aria-label="Visit Internship Hour Tracker">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+
+                        <div class="project-card-body">
+                            <div class="project-title-row">
+                                <div class="project-icon-box">
+                                    <i class="fa-solid fa-stopwatch-20"></i>
+                                </div>
+                                <div class="project-title-meta">
+                                    <h3 class="project-title">
+                                        <a href="https://internship-hour-tracker.vercel.app/" target="_blank" rel="noopener noreferrer">Internship Hour Tracker</a>
+                                    </h3>
+                                    <span class="project-domain">
+                                        <i class="fa-solid fa-link"></i> internship-hour-tracker.vercel.app
+                                    </span>
+                                </div>
+                            </div>
+
+                            <p class="project-desc">
+                                A full-stack productivity web application designed for interns and students to effortlessly log, monitor, and calculate daily On-the-Job Training (OJT) hours. Features company shift clamping, real-time attendance punching, customizable session policies, automated Daily Time Record (DTR) PDF report generation, and interactive milestone analytics.
+                            </p>
+
+                            <!-- Tech Stack Badges -->
+                            <div class="project-tech-tags">
+                                <span class="tag-pill"><i class="fa-brands fa-react"></i> React</span>
+                                <span class="tag-pill"><i class="fa-brands fa-microsoft"></i> ASP.NET Core</span>
+                                <span class="tag-pill"><i class="fa-solid fa-database"></i> MongoDB Atlas</span>
+                                <span class="tag-pill"><i class="fa-solid fa-file-pdf"></i> DTR PDF Export</span>
+                            </div>
+                        </div>
+
+                        <div class="project-card-footer">
+                            <a href="https://internship-hour-tracker.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-glow project-visit-btn">
+                                <span>Launch Project</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
@@ -1044,6 +1107,7 @@
                         <li><a href="#hero">Home</a></li>
                         <li><a href="#about">About</a></li>
                         <li><a href="#skills">Tech Stack &amp; Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
                         <li><a href="#education">Education &amp; Journey</a></li>
                         <li><a href="#certifications">Certifications</a></li>
                     </ul>

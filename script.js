@@ -577,4 +577,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    /* ==========================================================================
+       19. PROJECT CARDS INTERACTIVE REDIRECT
+       ========================================================================== */
+    const clickableProjectCards = document.querySelectorAll('.project-card[data-href]');
+    clickableProjectCards.forEach(card => {
+        const handleCardRedirect = (e) => {
+            if (e.target.closest('a') || e.target.closest('button')) {
+                return;
+            }
+            const href = card.getAttribute('data-href');
+            if (href) {
+                window.open(href, '_blank', 'noopener,noreferrer');
+            }
+        };
+
+        card.addEventListener('click', handleCardRedirect);
+
+        card.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                if (!e.target.closest('a') && !e.target.closest('button')) {
+                    e.preventDefault();
+                    handleCardRedirect(e);
+                }
+            }
+        });
+    });
+
 });
